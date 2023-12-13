@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+{% block content %}
+{% load static %}
+        <!-- title of site -->
+        <title>Nosotros | Mathilo </title>
+        <div class="container">
+            <div class="welcome-hero-content">
+				<div class="row">
+					<div class="col-sm-7">
+						<div class="welcome-hero-txt">
+							<h2>Sobre nosotros</h2>
+							<p>Bienvenido a Mathilo, donde la magia se encuentra con la funcionalidad. Nos enorgullece ofrecer una experiencia única en muebles para bebé, donde el diseño cuidadoso y la calidad excepcional se unen para crear un espacio encantador para los más pequeños.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+		<!--blog start -->
+		<section id="blog" class="blog">
+			<div class="container">
+				<div class="section-header">
+					<h2>Nuestra escencia</h2>
+				</div><!--/.section-header-->
+				<div class="blog-content">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="single-blog">
+								<div class="single-blog-img">
+									<img src="{% static 'images/mathilo/apreton-manos.jpg' %}" alt="blog image" style="width: auto; height: 280px;">
+
+									<div class="single-blog-img-overlay"></div>
+								</div>
+								<div class="single-blog-txt">
+									<h2><a href="">Nuestra Historia</a></h2>
+				
+									<p>En el corazón de Mathilo yace una historia apasionante. Comenzamos con el simple deseo de proporcionar a los padres soluciones elegantes y prácticas para el espacio de sus pequeños. Desde entonces, hemos evolucionado, pero nuestro compromiso con la excelencia y la creatividad perdura en cada pieza que creamos.
+									</p>
+								</div>
+							</div>
+							
+						</div>
+						<div class="col-sm-4">
+							<div class="single-blog">
+								<div class="single-blog-img">
+									<img src="{% static 'images/mathilo/calidad.jpg' %}" alt="blog image" style="width: auto; height: 280px;">
+									<div class="single-blog-img-overlay"></div>
+								</div>
+								<div class="single-blog-txt">
+									<h2><a href="">Compromiso con la Calidad</a></h2>
+									
+									<p>La calidad es el sello distintivo de Mathilo. Utilizamos materiales seguros y duraderos para crear piezas que resisten el paso del tiempo. Cada artículo es cuidadosamente inspeccionado para garantizar la seguridad y el confort de los más pequeños.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="single-blog">
+								<div class="single-blog-img">
+									<img src="{% static 'images/mathilo/trabajo.jpg' %}" alt="blog image" style="width: auto; height: 280px;">
+									<div class="single-blog-img-overlay"></div>
+								</div>
+								<div class="single-blog-txt">
+									<h2><a href="">Nuestro Equipo</a></h2>
+									
+									<p>Detrás de cada diseño hay un equipo apasionado y comprometido. Desde nuestros artesanos expertos hasta nuestro equipo de servicio al cliente, todos comparten una dedicación inquebrantable para hacer de Mathilo una experiencia excepcional para ti y tu familia.
+
+									Gracias por ser parte de nuestro viaje. En Mathilo, cada mueble cuenta una historia, y estamos emocionados de ser parte de la tuya.
+										
+									Descubre la magia de Mathilo.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!--/.container-->
+			
+		</section><!--/.blog-->
+		<!--blog end -->
+
+	
+
+		<!--footer start-->
+		<footer id="footer"  class="footer">
+			<div class="container">
+				<div class="hm-footer-copyright text-center">
+					<div class="footer-social">
+						<a href="#"><i class="fa fa-facebook"></i></a>	
+						<a href="#"><i class="fa fa-instagram"></i></a>
+						<a href="#"><i class="fa fa-linkedin"></i></a>
+						<a href="#"><i class="fa fa-pinterest"></i></a>
+						<a href="#"><i class="fa fa-behance"></i></a>	
+					</div>
+					<p>
+                                            &copy;copyright. <a href="https://www.themesine.com/">Mathilo S.A.</a> 2023
+					</p><!--/p-->
+				</div><!--/.text-center-->
+			</div><!--/.container-->
+
+			<div id="scroll-Top">
+				<div class="return-to-top">
+					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
+				</div>
+				
+			</div><!--/.scroll-Top-->
+			
+                </footer><!--/.footer-->
+		<!--footer end-->
+		
+		<!-- Include all js compiled plugins (below), or include individual files as needed -->
+
+		<script src="assets/js/jquery.js"></script>
+        
+        <!--modernizr.min.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+		
+		<!--bootstrap.min.js-->
+        <script src="assets/js/bootstrap.min.js"></script>
+		
+		<!-- bootsnav js -->
+		<script src="assets/js/bootsnav.js"></script>
+
+		<!--owl.carousel.js-->
+        <script src="assets/js/owl.carousel.min.js"></script>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+		
+        
+        <!--Custom JS-->
+        <script src="assets/js/custom.js"></script>
+        
+    </body>
+	
+</html>
+
+{% endblock %}
