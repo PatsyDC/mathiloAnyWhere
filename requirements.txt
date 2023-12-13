@@ -5,7 +5,7 @@ charset-normalizer==3.3.2
 crispy-bootstrap5==2023.10
 cryptography==41.0.7
 defusedxml==0.8.0rc2
-Django==5.0
+Django==3.10
 django-cors-headers==4.3.1
 django-crispy-forms==2.1
 django-jazzmin==2.6.0
