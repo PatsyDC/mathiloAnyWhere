@@ -1,55 +1,55 @@
 {%extends "layout.html"%}
-{%block content%}
 {% load static %}
 
+{% block header %}
 
+    {{ block.super }}
 
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <div class="single-slide-item slide1">
-                <div class="container">
-                    <div class="welcome-hero-content">
-                        <div class="row">
-                            <div class="col-sm-7">
-                                <div class="single-welcome-hero">
-                                    <div class="welcome-hero-txt">
-                                        <h4>Gran colección de diseño.</h4>
-                                        <h2>Osito</h2>
-                                        <p>
-                                            Juguetes de animales de peluche para niñas, muñecas de peluche para niños, regalos para niñas.
-                                        </p>
-                                        <div class="packages-price">
+    <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+	    <!--/.carousel-inner -->
+        <div class="carousel-inner" role="listbox">
+            <!-- .item -->
+            <div class="item active">
+                <div class="single-slide-item slide1">
+                    <div class="container">
+                        <div class="welcome-hero-content">
+                            <div class="row">
+                                <div class="col-sm-7">
+                                    <div class="single-welcome-hero">
+                                        <div class="welcome-hero-txt">
+                                            <h4>Gran colección de diseño.</h4>
+                                            <h2>Osito</h2>
                                             <p>
-                                                $ 25.00
-                                                <del>$ 60.00</del>
+                                                Juguetes de animales de peluche para niñas, muñecas de peluche para niños, regalos para niñas.
                                             </p>
-                                        </div>
-                                        <button class="btn-cart welcome-add-cart">
-                                            <span class="lnr lnr-plus-circle"></span>
-                                            Ofertas <span>imperdibles</span>
-                                        </button>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-5">
-                                <div class="single-welcome-hero">
-                                    <div class="welcome-hero-img">
-                                        <img src="{% static 'images/mathilo/sas.jpg' %}">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> 
+                                            <div class="packages-price">
+                                                <p>
+                                                    $ 25.00
+                                                    <del>$ 60.00</del>
+                                                </p>
+                                            </div>								
+                                        </div><!--/.welcome-hero-txt-->
+                                    </div><!--/.single-welcome-hero-->
+                                </div><!--/.col-->
+                                <div class="col-sm-5">
+                                    <div class="single-welcome-hero">
+                                        <div class="welcome-hero-img">
+                                            <img src="{% static 'images/mathilo/sas.jpg' %}" alt="oferta-banner">
+                                        </div><!--/.welcome-hero-txt-->
+                                    </div><!--/.single-welcome-hero-->
+                                </div><!--/.col-->
+                            </div><!--/.row-->
+                        </div><!--/.welcome-hero-content-->
+                    </div><!-- /.container-->
+                </div><!-- /.single-slide-item-->
+            </div><!-- /.item .active-->	
+        </div><!-- /.carousel-inner-->
+    </div><!--/#header-carousel-->
+    
+{% endblock %}
 
 
-<!--  -->
-
+{%block content%}
 <section id="new-arrivals" class="new-arrivals">
     <div class="container">
         <div class="section-header">
@@ -83,33 +83,4 @@
     </div><!--/.container-->
 </section><!--/.new-arrivals-->
 <!--new-arrivals end -->
-
-		<!--footer start-->
-		<footer id="footer"  class="footer">
-			<div class="container">
-				<div class="hm-footer-copyright text-center">
-					<div class="footer-social">
-						<a href="#"><i class="fa fa-facebook"></i></a>	
-						<a href="#"><i class="fa fa-instagram"></i></a>
-						<a href="#"><i class="fa fa-linkedin"></i></a>
-						<a href="#"><i class="fa fa-pinterest"></i></a>
-						<a href="#"><i class="fa fa-behance"></i></a>	
-					</div>
-					<p>
-                                            &copy;copyright. <a href="https://www.themesine.com/">Mathilo S.A.</a> 2023
-					</p><!--/p-->
-				</div><!--/.text-center-->
-			</div><!--/.container-->
-
-			<div id="scroll-Top">
-				<div class="return-to-top">
-					<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-				</div>
-				
-			</div><!--/.scroll-Top-->
-			
-        </footer><!--/.footer-->
-		<!--footer end-->
-
-
 {%endblock%}

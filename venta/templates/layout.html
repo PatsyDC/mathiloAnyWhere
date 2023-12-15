@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 {% load static %}
-    <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Mathilo</title>
-        <link href="{% static 'css/animate.css' %}" rel="stylesheet"> 
-        <link href="{% static 'css/bootsnav.css' %}" rel="stylesheet">
-		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-		<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
-		<link href="{% static 'css/linearicons.css' %}" rel="stylesheet">
-        <link href="{% static 'css/animate.css' %}" rel="stylesheet">
-        <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
-        <link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet">
-		<link href="{% static 'css/style.css' %}" rel="stylesheet">
-		<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
-		<link rel="stylesheet" href="'https://api.flaticon.com/v2/items/icons'">
-		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	
-<!-- kjj -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    </head>
-
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Mathilo</title>
+	<link href="{% static 'css/animate.css' %}" rel="stylesheet"> 
+	<link href="{% static 'css/bootsnav.css' %}" rel="stylesheet">
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/linearicons.css' %}" rel="stylesheet">
+	<link href="{% static 'css/animate.css' %}" rel="stylesheet">
+	<link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet">
+	<link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="'https://api.flaticon.com/v2/items/icons'">
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	<link rel="shortcut icon" type="image/icon" href="{% static 'images/mathilo/logo/favicon.png' %}"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 	<style>
 		a {
 			text-decoration: none;
@@ -33,89 +31,111 @@
 		}
 
 	</style>
+</head>
+<body>
+	{% block header %}
+		<header class="fixed-top">
+			<!-- top-area Start -->
+			<div>
+				<div class="header-area">
+					<!-- Start Navigation -->
+					<nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
+						<div class="container">       
+							<!-- Start Atribute Navigation -->
+							<div class="attr-nav">
+								<div class="navbar-header">
+									<a class="navbar-brand" href="{% url 'index' %}">
+										<img class="logo" src="{% static 'images/mathilo/mathilo-logo-sm.png' %}" alt="mathilo" height="50px"/>
+									</a>
+								</div><!--/.navbar-header-->								
+								<ul>									
+									<li class="scroll active"><a href="{% url 'index' %}">Inicio</a></li>
+									<li class="scroll"><a href="{% url 'nosotros' %}">Nosotros</a></li>
+									<li class="dropdown">
+										<a href="{% url 'carrito' %}"><span class="lnr lnr-cart"> </span></a>									
+									</li>							
+									<li class="nav-setting">
+											<a href="{% url 'perfil_usuario' %}"><span class="lnr lnr-user"></span></a>
+									</li>
+									{% if request.user.is_authenticated %}
+									<li><a href="{% url 'exit' %}"><span class="lnr lnr-exit"></span></a></li>
+									{% else %}
+										<li><a href="{% url 'login' %}"><span class="lnr lnr-enter"></span></a></li>
+									{% endif %}
+								</ul>
+								<!-- Categorías de productos Navbar -->
+								<div class="product-categories">
+									<ul>
+										<ul>
+											<li><a href="{% url 'muebles' %}"><i class="lnr lnr-home"></i> <span class="hidden-xs">Muebles</span></a></li>
+											<li><a href="{% url 'cuadros' %}"><i class="lnr lnr-picture"></i> <span class="hidden-xs">Cuadros</span></a></li>
+											<li><a href="{% url 'accesorios' %}"><i class="lnr lnr-star"></i> <span class="hidden-xs">Accesorios</span></a></li>
+											<li><a href="{% url 'papel_tapiz' %}"><i class="lnr lnr-file-empty"></i><span class="hidden-xs"> Papel Tapiz</span></a></li>
+											<li><a href="{% url 'calcomanias' %}"><i class="lnr lnr-diamond" style="color: #ffffff;"></i><span class="hidden-xs"> Calcomanías</span></a></li>
+											<li><a href="{% url 'crear_pedido_personalizado' %}"><i class="lnr lnr-magic-wand"></i> <span class="hidden-xs"> Personalizar</span></a></li>
+										</ul>
+									</ul>
+								</div>
+							</div>
+						</div><!--/.container-->
+					</nav><!--/nav-->
+					<!-- End Navigation -->
+				</div><!--/.header-area-->
+				<div class="clearfix"></div>
+			</div><!-- /.top-area-->
+			<!-- top-area End -->
+		</header>
+	{% endblock %}
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+	{%block content%}
+	{%endblock%}
+
+	{%block footer%}
+	<!--footer start-->
+	<footer id="footer"  class="footer">
 		<div class="container">
+			<div class="hm-footer-copyright text-center">
+				<div class="footer-social">
+					<a href="#"><i class="fa fa-facebook"></i></a>	
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-pinterest"></i></a>
+					<a href="#"><i class="fa fa-behance"></i></a>	
+				</div>
+				<p>
+										&copy;copyright. <a href="https://www.themesine.com/">Mathilo S.A.</a> 2023
+				</p><!--/p-->
+			</div><!--/.text-center-->
+		</div><!--/.container-->
 
-			<a href="{% url 'index' %}">
-				<img class="logo" src="{% static 'images/mathilo/mathilo-sin-fondo.png' %}" alt="mathilo"/>
-			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
-					<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-						<ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
-							<li><a href="{% url 'index' %}">Inicio</a></li>
-							<li><a href="{% url 'nosotros' %}">Nosotros</a></li>
-						</ul>
-					</div>
-				</ul>
+		<div id="scroll-Top">
+			<div class="return-to-top">
+				<i class="fa fa-angle-up " id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
 			</div>
-			<div class="attr-nav">
-				<ul>
-					<li class="dropdown">
-						<a href="{% url 'carrito' %}" class="dropdown-toggle" data-toggle="dropdown" style="text-decoration: none;">
-							<span class="lnr lnr-cart"></span>
-						</a>
-						<ul class="dropdown-menu cart-list s-cate">
-							<li class="total">
-								<span>Total: $0.00</span>
-								<button class="btn-cart pull-right" onclick="window.location.href='#'">view cart</button>
-							</li>
-						</ul>
-					</li>
+			
+		</div><!--/.scroll-Top-->
+		
+	</footer><!--/.footer-->
+	<!--footer end-->
+	{%endblock%}
 
-					<li>
-						<a href="{% url 'perfil_usuario' %}" style="text-decoration: none;">
-							<span class="lnr lnr-user"></span> <!-- Reemplaza lnr-user con la clase de icono de usuario que desees -->
-						</a>
-					</li>
-					{% if request.user.is_authenticated %}
-					<li><a href="{% url 'exit' %}">Cerrar sesión</a></li>
-					{% else %}
-						<li><a href="{% url 'login' %}">Ingresar</a></li>
-					{% endif %}
-				</ul>
-			</div>
-
-			<div class="product-categories text-center">
-				<ul>
-					<li><a href="{% url 'muebles' %}"><i class="lnr lnr-home"></i> <span class="hidden-xs">Muebles</span></a></li>
-					<li><a href="{% url 'cuadros' %}"><i class="lnr lnr-picture"></i> <span class="hidden-xs">Cuadros</span></a></li>
-					<li><a href="{% url 'accesorios' %}"><i class="lnr lnr-star"></i> <span class="hidden-xs">Accesorios</span></a></li>
-					<li><a href="{% url 'papel_tapiz' %}"><i class="lnr lnr-file-empty"></i><span class="hidden-xs"> Papel Tapiz</span></a></li>
-					<li><a href="{% url 'calcomanias' %}"><i class="lnr lnr-diamond" style="color: #ffffff;"></i><span class="hidden-xs"> Calcomanías</span></a></li>
-					<li><a href="{% url 'crear_pedido_personalizado' %}"><i class="lnr lnr-magic-wand"></i> <span class="hidden-xs"> Personalizar</span></a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-
-	
-
-
-	<!--welcome-hero end -->
+        
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 	<script src="{% static 'js/bootsnav.js' %}"></script>
 	<script src="{% static 'js.bootstrap.min.js' %}"></script>
 	<script src="{% static 'js.custom.js'%}"></script>
 	<script src="{% static 'js/jquery.js' %}"></script>
 	<script src="{% static 'js.owl.carousel.min.js' %}"></script>
-	
+	<script>
+		window.onscroll = function() {
+			var nav = document.querySelector('.navbar');
+			if (window.scrollY > 0) {
+				nav.classList.add('bg-white');
+			} else {
+				nav.classList.remove('bg-white');
+			}
+		};
+	</script>
+</body>
 </html>
-
-<script>
-	window.onscroll = function() {
-		var nav = document.querySelector('.navbar');
-		if (window.scrollY > 0) {
-			nav.classList.add('bg-white');
-		} else {
-			nav.classList.remove('bg-white');
-		}
-	};
-</script>
-
-
-
-{%block content%} {%endblock%}

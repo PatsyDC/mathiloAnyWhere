@@ -1,24 +1,37 @@
 {%extends "layout.html"%}
-{%block content%}
+
 {% load static %}
 
+{% block header %}
+{% endblock %}
+
+{%block content%}
 {% load crispy_forms_tags %}
 
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+		<div class="col-md-4">
+			<div class="card">
+				
+				<div class="card-body">
+					<h4 class="card-title text-center">¡Registrate!</h4>
+					<form class="forms-sample" action="" method="post">
+                        {% csrf_token %}
+                        {{form | crispy }}
 
-    <div class="container" style="max-width: 650px;">
-        <br>
-        <h1 style="text-align: center;">Crear una cuenta</h1>
-        <br>
-        <main class="form-signin w-100 m-auto">
-            <form action="" method="post">
-                {% csrf_token %}
-                {{form | crispy }}
+						<div class="text-center mt-2">
+							<button type="submit" id="login-submit" name="submit" class="btn btn-primary btn-lg me-2 mt-3">
+								Registrarse
+							</button>
+						</div>
 
-                <button class="btn-cart welcome-add-cart d-block mx-auto mt-3" type="submit">Registrarse</button>
-                <br>
-                <p style="text-align: center;">¿Ya tienes una cuenta?</p>
-                <a href="{% url 'login' %}" class="btn-cart welcome-add-cart welcome-more-info d-block mx-auto mt-3" style="text-align: center;">Iniciar sesión</a>
-            </form>
-        </main>
-    </div>
+						<h5 class="text-center text-muted mt-4 mb-0">¿Ya tiene cuenta? <a href="{% url 'login' %}"
+								class="fw-bold text-body"><h5><u>Inicia sesión</u><h5></a></h5>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block footer %}
 {% endblock %}
